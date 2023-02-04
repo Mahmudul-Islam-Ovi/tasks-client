@@ -8,12 +8,11 @@ const DataDetails = ({ information, index }) => {
     const deleteUser = _id => {
         const agree = window.confirm(`Are you sure you want to delete ${name}`);
         if (agree) {
-            fetch(`http://localhost:400/information/${_id}`, {
+            fetch(`https://tasks-server-tau.vercel.app/information/${_id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
                     if (data.deletedCount > 0) {
                         alert("Information Delete Successfully");
                     }

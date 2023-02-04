@@ -8,7 +8,7 @@ const UpdateData = () => {
 
     const handleUpdate = event => {
         event.preventDefault();
-        fetch(`http://localhost:400/information/${user._id}`, {
+        fetch(`https://tasks-server-tau.vercel.app/information/${user._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

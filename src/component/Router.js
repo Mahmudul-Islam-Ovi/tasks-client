@@ -18,12 +18,12 @@ const Router = () => {
         {
             path: "/show",
             element: <ShowData></ShowData>,
-            loader : ()=> fetch('http://localhost:400/information')
+            loader : ()=> fetch('https://tasks-server-tau.vercel.app/information')
         },
         {
             path: "/update/:id",
             element: <UpdateData></UpdateData>,
-            loader : ({params})=> fetch(`http://localhost:400/information/${params.id}`)
+            loader : ({params})=> fetch(`https://tasks-server-tau.vercel.app/information/${params.id}`)
         },
     ]);
 

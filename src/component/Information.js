@@ -5,7 +5,7 @@ const Information = () => {
 
     const handleSend = event => {
         event.preventDefault();
-        fetch('http://localhost:400/information', {
+        fetch('https://tasks-server-tau.vercel.app/information', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
